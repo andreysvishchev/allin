@@ -1,0 +1,112 @@
+@import "../../../../css/common.scss";
+
+.Section {
+  margin-bottom: 120px;
+}
+
+.Top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.Content {
+  padding-bottom: 25px;
+  margin-top: 40px;
+}
+
+.Image {
+  width: 110px;
+  height: 110px;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.Caption {
+  @include h2;
+  max-width: 900px;
+  width: 100%;
+}
+
+.Text {
+  max-width: 700px;
+  @include text-18;
+  margin-bottom: 40px;
+
+  p {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.Accordion {
+  padding-bottom: 20px;
+  border-bottom: 1px solid $grey-light;
+  margin-top: 20px;
+}
+
+.Open {
+  .Trigger {
+    &:before {
+      opacity: 0;
+    }
+  }
+}
+
+.Trigger {
+  margin-left: 35px;
+  width: 40px;
+  height: 40px;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    background-color: $yellow;
+    width: 100%;
+    height: 2px;
+    transition: $transition;
+  }
+
+  &:after {
+    top: 50%;
+    left: 0;
+  }
+
+  &:before {
+    top: 50%;
+    left: 0;
+    transform: rotate(90deg) translateY(-1px);
+  }
+}
+
+.More {
+  margin-left: auto;
+  margin-top: 60px;
+}
+
+
+@media only screen and (min-width: $desktopWide) {
+
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+
+}
+
+@media only screen and (max-width: $mobile) {
+
+}

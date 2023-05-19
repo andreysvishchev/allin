@@ -1,0 +1,45 @@
+@import "../../../../css/common.scss";
+
+.Wrap {
+ max-width: 390px;
+ width: 100%;
+ margin-right: 40px;
+}
+
+.Title {
+ @include button;
+ position: relative;
+ width: fit-content;
+ margin-bottom: 36px;
+
+ &::before {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: $white;
+ }
+}
+
+
+
+
+
+
+@media only screen and (min-width: $desktopWide) {
+
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+
+}
+
+@media only screen and (max-width: $mobile) {
+
+}

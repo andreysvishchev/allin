@@ -1,0 +1,62 @@
+@import "../../../../css/common.scss";
+
+.Section {
+  margin-bottom: 120px;
+}
+
+.Grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.Item {
+  padding: 40px;
+  border: 1px solid $grey-light;
+
+  &:nth-child(2n) {
+    border-left: none;
+  }
+
+  &:nth-child(1),
+  &:nth-child(2) {
+    border-bottom: none;
+  }
+}
+
+.Top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.Num {
+  @include h1;
+  color: $grey-light;
+}
+
+.Caption {
+  @include h3;
+  margin-bottom: 20px;
+}
+
+.Text {
+  @include text-18;
+}
+
+
+@media only screen and (min-width: $desktopWide) {
+
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+
+}
+
+@media only screen and (max-width: $mobile) {
+
+}

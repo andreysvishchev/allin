@@ -1,0 +1,143 @@
+@import "../../../css/common.scss";
+
+.Wrap {
+  width: 320px;
+  height: 52px;
+  border-radius: 30px;
+  background-color: transparent;
+  @include button;
+  color: $navy-blue;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(18, 17, 31, 0.2);
+
+  span {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+
+    a, button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      text-transform: uppercase;
+    }
+  }
+
+  &:before {
+    content: '';
+    background-color: $yellow;
+    transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+    transform-origin: 100% 50%;
+    border: 1px solid $yellow;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: 30px;
+    pointer-events: none;
+  }
+
+  &.Transparent {
+
+    &:hover {
+      background-color: $grey-light;
+      border: 1px solid $navy-blue;
+
+      span {
+        a, button {
+          animation: MoveUpInitialTransparent 0.25s forwards, MoveUpEnd 0.25s forwards 0.25s;
+        }
+      }
+    }
+  }
+
+  &.Dark {
+    border: 1px solid $grey-light;
+    background-color: $grey-light;
+    color: $grey-light;
+
+    &:before {
+      background-color: $navy-blue;
+      border: 1px solid transparent;
+    }
+
+    &:hover {
+      background-color: $grey-light;
+
+      span {
+        a, button {
+          animation: MoveUpInitialDark 0.25s forwards, MoveUpEnd 0.25s forwards 0.25s;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    border: 1px solid $grey-light;
+    box-shadow: none;
+    background-color: $navy-blue;
+
+    span {
+      a, button {
+        animation: MoveUpInitialLight 0.25s forwards, MoveUpEnd 0.25s forwards 0.25s;
+      }
+    }
+
+    &:before {
+      transform: scale3d(0, 1, 1);
+      transform-origin: 0% 50%;
+    }
+  }
+}
+
+@keyframes MoveUpInitialDark {
+  to {
+    transform: translate3d(0, -105%, 0);
+    color: $navy-blue;
+  }
+}
+
+@keyframes MoveUpInitialLight {
+  to {
+    transform: translate3d(0, -105%, 0);
+    color: $grey-light;
+  }
+}
+
+@keyframes MoveUpInitialTransparent {
+  to {
+    transform: translate3d(0, -105%, 0);
+    color: $navy-blue;
+  }
+}
+
+@keyframes MoveUpEnd {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+@media only screen and (min-width: $desktopWide) {
+
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+
+}
+
+@media only screen and (max-width: $mobile) {
+
+}

@@ -1,0 +1,62 @@
+@import "../../../css/common.scss";
+
+.Wrap {
+  position: relative;
+
+  &:hover {
+    .Field {
+      border-color: $yellow-light;
+    }
+
+    .Placeholder {
+      color: $grey-dark;
+    }
+  }
+}
+
+.Field {
+  width: 100%;
+  background-color: $grey-light;
+  border: 1px solid $navy-blue;
+  padding: 10px;
+  @include text-18;
+  color: $black;
+  transition: $transition;
+
+  &:focus + label,
+  &:not(:placeholder-shown) + label {
+    color: $grey-dark;
+  }
+
+  &:focus {
+    border-color: $yellow-light;
+  }
+}
+
+.Placeholder {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  background-color: $grey-light;
+  padding: 0 15px 0 10px;
+  @include text-16;
+  color: $navy-blue;
+  transition: $transition;
+}
+
+
+@media only screen and (min-width: $desktopWide) {
+
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+
+}
+
+@media only screen and (max-width: $mobile) {
+
+}

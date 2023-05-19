@@ -1,0 +1,134 @@
+@import "../../../css/common.scss";
+
+.Wrap {
+  position: relative;
+  margin-right: 55px;
+
+
+  &.Open {
+    .Icon {
+      svg {
+        path {
+          fill: $yellow;
+        }
+      }
+    }
+  }
+}
+
+.Icon {
+  cursor: pointer;
+  svg {
+    path {
+      transition: $transition;
+    }
+  }
+}
+
+.Inner {
+  position: absolute;
+  z-index: 10;
+  padding-top: 50px;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-57%);
+  width: 605px;
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition;
+}
+
+.Controls {
+  box-shadow: 0px 0px 10px rgba(18, 17, 31, 0.2);
+  backdrop-filter: blur(5px);
+  background: rgba(247, 245, 239, 0.8);
+  padding: 10px 10px 0 10px;
+}
+
+.Label {
+  display: block;
+  width: 100%;
+  position: relative;
+  padding-right: 25px;
+}
+
+.Clear {
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
+.Input {
+  width: 100%;
+  background-color: transparent;
+  @include h4;
+  color: $black;
+  padding-bottom: 10px;
+
+  &::placeholder {
+    @include h4;
+    color: $grey-dark;
+  }
+}
+
+.List {
+  padding-bottom: 5px;
+  border-top: 1px solid $grey-dark;
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition;
+
+}
+
+.Link {
+  @include h5;
+  color: $black;
+  display: block;
+  padding: 5px 0;
+  position: relative;
+  transition: $transition;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    top: 8px;
+    right: 7px;
+    background-color: $black;
+    mask-image: url('../../../images/icons/global/arrow-link.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+  }
+
+  &:hover {
+    &:after {
+      background-color: $yellow-light;
+    }
+  }
+
+  &:first-child {
+    padding: 10px 0 5px 0;
+
+    &:after {
+      top: 13px;
+    }
+  }
+}
+
+
+@media only screen and (min-width: $desktopWide) {
+
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+
+}
+
+@media only screen and (max-width: $mobile) {
+
+}

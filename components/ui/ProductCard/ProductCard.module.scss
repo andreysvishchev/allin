@@ -1,0 +1,238 @@
+@import '../../../css/common.scss';
+
+.Wrap {
+	cursor: pointer;
+
+	&.NotBasket {
+		.Button {
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+		}
+
+		.Title {
+			transform: translateY(40px);
+		}
+
+		&:hover {
+			.Button {
+				opacity: 1;
+				visibility: visible;
+				pointer-events: auto;
+			}
+
+			.Title {
+				transform: translateY(0);
+			}
+		}
+	}
+}
+
+.Preview {
+	width: 100%;
+	height: 250px;
+	padding: 20px;
+	background-color: $grey-light;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.Info {
+	margin-left: 10px;
+}
+
+.Image {
+	width: 170px;
+	height: 210px;
+	position: relative;
+	overflow: hidden;
+
+	img {
+		object-fit: cover;
+	}
+}
+
+.Title {
+	max-width: 170px;
+	text-align: center;
+	@include product-card-header;
+	color: $black;
+	margin: 0;
+	transition: $transition;
+}
+
+.Bot {
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Weight {
+	@include text-16;
+}
+
+.Price {
+	@include product-card-price;
+}
+
+.Button {
+	margin-top: 20px;
+	max-width: 170px;
+	width: 100%;
+	height: 52px;
+	border-radius: 30px;
+	background-color: $yellow-light;
+	@include product-card-button;
+	padding: 0 20px;
+	color: $navy-blue;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+	box-shadow: 0px 0px 10px rgba(18, 17, 31, 0.2);
+	border: 1px solid transparent;
+	display: flex;
+	align-items: center;
+	cursor: default;
+	transition: $transition;
+
+	span {
+		overflow: hidden;
+		position: relative;
+		span {
+			overflow: hidden;
+			display: block;
+		}
+	}
+
+	&.Empty {
+		background-color: $navy-blue;
+		cursor: pointer;
+
+		.Background {
+			display: block;
+		}
+
+		&:hover {
+			box-shadow: none;
+			border: 1px solid $navy-blue;
+
+			span {
+				span {
+					animation: MoveUpInitial 0.25s forwards, MoveUpEnd 0.2s forwards 0.25s;
+				}
+			}
+
+			.Background {
+				transform: scale3d(0, 1, 1);
+				transform-origin: 0% 50%;
+			}
+		}
+	}
+}
+
+.Background {
+	display: none;
+	position: absolute;
+	border-radius: 30px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $grey-light;
+	transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+	transform-origin: 100% 50%;
+}
+
+@keyframes MoveUpInitial {
+	to {
+		transform: translate3d(0, -105%, 0);
+		color: $grey-light;
+	}
+}
+
+@keyframes MoveUpEnd {
+	from {
+		transform: translate3d(0, 100%, 0);
+	}
+	to {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.Counter {
+	margin-top: 20px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	visibility: hidden;
+	opacity: 0;
+	transition: $transition;
+}
+
+.Num {
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 110%;
+	color: $black;
+	width: 70px;
+	text-align: center;
+}
+
+.Minus {
+	flex-shrink: 0;
+	width: 25px;
+	height: 25px;
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 12.5px;
+		left: 7.5px;
+		width: 13px;
+		height: 3px;
+		background-color: $black;
+	}
+}
+
+.Plus {
+	width: 25px;
+	height: 25px;
+	position: relative;
+	flex-shrink: 0;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 7.5px;
+		left: 12.5px;
+		width: 3px;
+		height: 13px;
+		background-color: $black;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 12.5px;
+		left: 7.5px;
+		width: 13px;
+		height: 3px;
+		background-color: $black;
+	}
+}
+
+@media only screen and (min-width: $desktopWide) {
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+}
+
+@media only screen and (max-width: $mobile) {
+}

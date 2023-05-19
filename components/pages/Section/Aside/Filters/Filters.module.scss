@@ -1,0 +1,79 @@
+@import "../../../../../css/common.scss";
+
+
+.Caption {
+  @include menu;
+  margin-bottom: 20px;
+}
+
+.Checkbox {
+  display: flex;
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: fit-content;
+
+  &.Active {
+    .Icon {
+      background-color: $yellow;
+
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.Icon {
+  margin-right: 13px;
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  border: 1px solid $yellow;
+  border-radius: 50%;
+  transition: $transition;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    transition: $transition;
+    opacity: 0;
+  }
+}
+
+.Name {
+  @include text-18;
+}
+
+.Item {
+  margin-bottom: 35px;
+
+  &:last-child {
+    margin-bottom: 60px;
+  }
+}
+
+.Send {
+  margin-bottom: 20px;
+}
+
+
+@media only screen and (min-width: $desktopWide) {
+
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+
+}
+
+@media only screen and (max-width: $mobile) {
+
+}

@@ -1,0 +1,56 @@
+@import "../../../css/common.scss";
+
+.Wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.List {
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.Page {
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $grey-dark;
+  transition: $transition;
+  cursor: pointer;
+
+  &:hover {
+    color: $white;
+  }
+
+  &.Current {
+    pointer-events: none;
+    color: $white;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+
+@media only screen and (min-width: $desktopWide) {
+
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+
+}
+
+@media only screen and (max-width: $mobile) {
+
+}

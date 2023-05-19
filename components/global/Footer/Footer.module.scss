@@ -1,0 +1,104 @@
+@import "../../../css/common.scss";
+
+.Wrap {
+  padding: 70px 0 50px 0;
+  background-color: $grey-light;
+  border-top: 1px solid $grey-dark;
+}
+
+.Container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Caption {
+  color: $grey-dark;
+  @include h4;
+  margin-bottom: 20px;
+}
+
+.List {
+  list-style: none;
+  margin-bottom: 40px;
+}
+
+.Item {
+  margin-bottom: 20px;
+
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.Link {
+  width: fit-content;
+  display: inline-block;
+  @include text-16;
+  color: $black;
+  display: flex;
+
+  align-items: center;
+
+  &:hover {
+    .Icon {
+      opacity: 1;
+    }
+  }
+}
+
+.Icon {
+  width: 11px;
+  height: 11px;
+  background-color: $yellow-light;
+  mask-image: url('../../../images/icons/global/arrow-link.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  margin-left: 15px;
+  transition: $transition;
+  opacity: 0;
+}
+
+.Bot {
+  border-top: 1px solid $grey-dark;
+  padding-top: 40px;
+}
+
+.BotContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Social {
+  display: flex;
+  align-items: center;
+  @include text-16;
+  color: $black;
+  margin-bottom: 30px;
+
+  svg {
+    margin-right: 20px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+@media only screen and (min-width: $desktopWide) {
+
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+
+}
+
+@media only screen and (max-width: $mobile) {
+
+}

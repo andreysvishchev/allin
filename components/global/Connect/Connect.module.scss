@@ -1,0 +1,74 @@
+@import "../../../css/common.scss";
+
+.Section {
+  padding: 100px 0;
+  background-color: $grey-light;
+  color: black;
+}
+
+.Container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Image {
+  margin-left: 40px;
+}
+
+.Inner {
+  max-width: 600px;
+}
+
+.Title {
+  @include h3;
+  margin-bottom: 10px;
+}
+
+.Subtitle {
+  @include text-18;
+  margin-bottom: 40px;
+}
+
+.Row {
+  display: flex;
+  margin-bottom: 28px;
+}
+
+.Input {
+  width: 100%;
+  margin-right: 40px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.Textarea {
+  margin-bottom: 18px;
+}
+
+.Agreement {
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.Text {
+  margin-left: 10px;
+  @include text-16;
+  max-width: 540px;
+}
+
+@media only screen and (min-width: $desktopWide) {
+
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+
+}
+
+@media only screen and (max-width: $mobile) {
+
+}

@@ -1,0 +1,112 @@
+/* ==========================================================================
+   Брейки
+   ========================================================================== */
+
+$mobile: 767px;
+$tabletPortraitMin: 768px;
+$tabletPortraitMax: 1023px;
+$tabletLandscapeMin: 1024px;
+$tabletLandscapeMax: 1280px;
+$desktopWide: 1770px;
+
+/* ==========================================================================
+   Цвета
+   ========================================================================== */
+
+$white: #FFFFFF;
+$yellow: #F4D606;
+$yellow-light: #F4CE04;
+$navy-blue: #12111F;
+$black: #000000;
+$grey-dark: #A5A49F;
+$grey-light: #F7F5EF;
+
+/* ==========================================================================
+   Шрифты
+   ========================================================================== */
+
+@mixin h1 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 80px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@mixin h2 {
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 52px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@mixin h3 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 130%;
+}
+
+@mixin h4 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 130%;
+}
+
+@mixin h5 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+@mixin product-card-header {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 110%;
+}
+
+@mixin product-card-button {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+
+@mixin product-card-price {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 130%;
+}
+
+@mixin text-18 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+}
+
+@mixin text-16 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+@mixin button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@mixin menu {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0.07em;
+}
+
+/* ==========================================================================
+   Прочее
+   ========================================================================== */
+
+$transition: all 0.25s ease;

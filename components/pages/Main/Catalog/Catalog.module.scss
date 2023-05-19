@@ -1,0 +1,104 @@
+@import "../../../../css/common.scss";
+
+.Section {
+  padding: 120px 0 130px 0;
+}
+
+.Inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.Caption {
+  @include h2;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+
+.Link {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $grey-light;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    .Image {
+      img {
+        transform: scale(1.25);
+      }
+    }
+
+    .Headline {
+      color: $yellow-light;
+    }
+
+    .Icon {
+      svg {
+        path {
+          &:first-child {
+            stroke: $yellow-light;
+            fill: $yellow-light;
+          }
+
+          &:last-child {
+            fill: $navy-blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+.Image {
+  position: relative;
+  overflow: hidden;
+  width: 82px;
+  height: 110px;
+  margin-right: 20px;
+
+  img {
+    object-fit: cover;
+    transition: $transition;
+  }
+}
+
+.Headline {
+  max-width: 400px;
+  margin-right: 20px;
+  transition: $transition;
+  @include h4;
+  color: $grey-light;
+}
+
+.Icon {
+  margin-right: 15px;
+  margin-left: auto;
+
+  svg {
+    path {
+      transition: $transition;
+    }
+  }
+}
+
+@media only screen and (min-width: $desktopWide) {
+
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+
+}
+
+@media only screen and (max-width: $mobile) {
+
+}

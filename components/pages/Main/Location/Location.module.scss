@@ -1,0 +1,80 @@
+@import "../../../../css/common.scss";
+
+.Section {
+  margin-bottom: 120px;
+}
+
+.Inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Info {
+  margin-right: 40px;
+}
+
+.Caption {
+  @include h3;
+  margin-bottom: 10px;
+}
+
+.Row {
+  margin-bottom: 40px;
+}
+
+.Address {
+  @include text-18;
+  color: $yellow;
+}
+
+.Link {
+  @include text-18;
+}
+
+.Licenses {
+  margin-bottom: 60px;
+  display: flex;
+}
+
+.Image {
+  margin-right: 10px;
+  width: 127px;
+  height: 182px;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.Map {
+  width: 720px;
+  height: 780px;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+@media only screen and (min-width: $desktopWide) {
+
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+
+}
+
+@media only screen and (max-width: $mobile) {
+
+}

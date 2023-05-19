@@ -1,0 +1,37 @@
+@import "../../../css/common.scss";
+
+.Wrap {
+  padding-top: 40px;
+  padding-bottom: 120px;
+}
+
+.Title {
+  color: $yellow;
+  @include h2;
+}
+
+.Inner {
+  margin-top: 60px;
+  display: flex;
+}
+
+.Content {
+  width: 100%;
+}
+
+
+@media only screen and (min-width: $desktopWide) {
+
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+
+}
+
+@media only screen and (max-width: $mobile) {
+
+}

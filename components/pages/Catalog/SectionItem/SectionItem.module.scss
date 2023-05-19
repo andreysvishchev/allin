@@ -1,0 +1,68 @@
+@import '../../../../css/common.scss';
+
+.Wrap {
+    margin-bottom: 60px;
+
+    &.Reverse {
+        .Info {
+            order: 1;
+            margin-right: 0;
+            margin-left: 40px;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.Inner {
+    display: flex;
+}
+
+.Link {
+    @include h3;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+
+    &:after {
+        content: '';
+        width: 13px;
+        height: 13px;
+        background-color: $yellow-light;
+        mask-image: url('../../../../images/icons/global/arrow-link.svg');
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        margin-left: 14px;
+    }
+}
+
+.Desc {
+    @include text-18;
+    margin-bottom: 40px;
+}
+
+.Info {
+    max-width: 387px;
+    margin-right: 40px;
+}
+
+.Cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+@media only screen and (min-width: $desktopWide) {
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+}
+
+@media only screen and (max-width: $mobile) {
+}
