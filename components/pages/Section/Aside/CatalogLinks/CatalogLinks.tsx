@@ -1,9 +1,9 @@
-import {FC, useId} from 'react'
+import { useSection } from "@/components/pages/Section/store"
+import { useId } from 'react'
+import Collapsible from "react-collapsible"
 import classes from './CatalogLinks.module.scss'
-import {useSection} from "@/components/pages/Section/store";
-import Collapsible from "react-collapsible";
 
-const CatalogLinks: FC = ({}) => {
+const CatalogLinks = () => {
     const id = useId()
     const links = useSection(state => state.catalogLinks)
 
@@ -15,18 +15,18 @@ const CatalogLinks: FC = ({}) => {
                     ? links.map((el, i) =>
                         <div key={i} className={classes.Category}>
                             <Collapsible open={true}
-                                         classParentString={classes.Accordion}
-                                         openedClassName={classes.Open}
-                                         contentElementId={`collapsible-content-${id}`}
-                                         triggerElementProps={{
-                                             id: `collapsible-trigger-${id}`
-                                         }}
-                                         trigger={
-                                             <div className={classes.Trigger}>{el.title}</div>
-                                         }>
+                                classParentString={classes.Accordion}
+                                openedClassName={classes.Open}
+                                contentElementId={`collapsible-content-${id}`}
+                                triggerElementProps={{
+                                    id: `collapsible-trigger-${id}`
+                                }}
+                                trigger={
+                                    <div className={classes.Trigger}>{el.title}</div>
+                                }>
                                 <div className={classes.Items}>
                                     {el.links && el.links
-                                        ? el.links.map((link, index )=>
+                                        ? el.links.map((link, index) =>
                                             <button className={classes.Button} key={index}>{link.title}</button>
                                         ) : null}
                                 </div>

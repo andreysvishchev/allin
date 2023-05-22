@@ -1,0 +1,126 @@
+@import '../../../css/common.scss';
+
+.Wrap {
+    position: relative;
+    max-width: 250px;
+}
+
+.Inner {
+    background-color: transparent;
+}
+
+.CurrentValue {
+    padding: 10px 40px 10px 20px;
+    @include h5;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    cursor: pointer;
+    position: relative;
+
+    &.Active {
+        color: $yellow;
+        svg {
+            path {
+                fill: $yellow;
+            }
+        }
+    }
+
+    span {
+        margin-right: 10px;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        width: 11px;
+        height: 6px;
+        background-image: url('../../../images/icons/global/select-arrow.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: $transition;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        width: calc(100% - 20px);
+        height: 1px;
+        background-color: $grey-dark;
+    }
+
+    &.Open {
+        &::before {
+            opacity: 0;
+        }
+        &:after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+}
+
+.Options {
+    position: absolute;
+    background-color: $navy-blue;
+    width: 100%;
+    padding: 0 20px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+        opacity: 0;
+    }
+
+    &.Open {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+.Option {
+    white-space: nowrap;
+    padding: 10px 0;
+    @include text-18;
+    cursor: pointer;
+    transition: 0.25s color ease;
+    display: flex;
+    align-items: center;
+
+    span {
+        margin-right: 10px;
+    }
+
+    svg {
+        path {
+            transition: $transition;
+        }
+    }
+
+    &:hover {
+        color: $yellow;
+        svg {
+            path {
+                fill: $yellow;
+            }
+        }
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+@media only screen and (max-width: $mobile) {
+}

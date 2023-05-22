@@ -1,12 +1,11 @@
 import classes from './RangeSlider.module.scss'
 
+import { RangeSliderType } from "@/components/ui/CustomRangeSlider/types"
 import Slider from 'rc-slider'
-import {FC, useState} from "react";
-import {RangeSliderType} from "@/components/ui/CustomRangeSlider/types";
+import { FC } from "react"
 
 
-const CustomRangeSlider: FC<RangeSliderType> = ({onChange, maxValue, minValue, minPrice, maxPrice}) => {
-
+const CustomRangeSlider: FC<RangeSliderType> = ({ onChange, maxValue, minValue, minPrice, maxPrice }) => {
 
     return (
         <div className={classes.Wrap}>
@@ -55,7 +54,7 @@ const CustomRangeSlider: FC<RangeSliderType> = ({onChange, maxValue, minValue, m
                 value={[minValue, maxValue]}
             />
         </div>
-    );
-};
+    )
+}
 
-export default CustomRangeSlider;
+export default CustomRangeSlider

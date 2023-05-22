@@ -1,0 +1,73 @@
+@import '../../../../../css/common.scss';
+.Wrap {
+    cursor: pointer;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $grey-light;
+    position: relative;
+    &.Open {
+        .Options {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+    }
+}
+
+.Title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    @include h5;
+
+    &:after {
+        content: '';
+        width: 11px;
+        height: 6px;
+        background-image: url('../../../../../images/icons/global/select-arrow.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: $transition;
+    }
+}
+
+.Options {
+    position: absolute;
+    z-index: 1;
+    top: 25px;
+    left: 0;
+    background-color: $navy-blue;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $grey-light;
+}
+
+.Option {
+    margin-bottom: 10px;
+    @include text-18;
+    transition: $transition;
+
+    &:hover {
+        color: $yellow;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: $desktopWide) {
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+}
+
+@media only screen and (max-width: $mobile) {
+}

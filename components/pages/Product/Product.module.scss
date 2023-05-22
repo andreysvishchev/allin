@@ -1,0 +1,144 @@
+@import '../../../css/common.scss';
+
+.Wrap {
+    padding-top: 40px;
+    padding-bottom: 120px;
+}
+
+.Tabs {
+    max-width: 920px;
+    padding-bottom: 120px;
+}
+
+.TabList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.TabBtn {
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    @include h3;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $grey-light;
+    transition: $transition;
+    &.Active {
+        border-color: $yellow;
+    }
+}
+
+.Desc {
+    p {
+        @include text-18;
+    }
+
+    strong {
+        @include h4;
+        display: block;
+    }
+    ul {
+        margin-left: 20px;
+    }
+
+    li {
+        @include text-18;
+    }
+}
+
+.Row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 0 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $grey-light;
+    padding-top: 20px;
+    &:first-child {
+        padding-top: 0;
+    }
+}
+
+.Key {
+    @include h5;
+    color: $yellow;
+}
+
+.Value {
+    @include text-18;
+    p {
+        margin-bottom: 10px;
+        strong {
+            font-weight: 700;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.Certificate {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 260px;
+    padding: 25px 0;
+    border-bottom: 1px solid $grey-light;
+    &:first-child {
+        padding-top: 0;
+    }
+}
+
+.CertificateTitle {
+    display: flex;
+    align-items: center;
+    @include h4;
+    &::before {
+        content: '';
+        width: 34px;
+        height: 40px;
+        margin-right: 40px;
+        background-image: url('../../../images/icons/global/documnet.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.CertificateLink {
+    @include button;
+    display: flex;
+    align-items: center;
+
+    span {
+        width: 65px;
+        height: 52px;
+        box-shadow: 0px 0px 10px rgba(18, 17, 31, 0.2);
+        border-radius: 30px;
+        background-color: $yellow;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-image: url('../../../images/icons/global/download.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+@media only screen and (min-width: $desktopWide) {
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+}
+
+@media only screen and (max-width: $mobile) {
+}

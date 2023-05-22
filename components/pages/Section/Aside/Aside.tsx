@@ -1,16 +1,15 @@
-import {FC} from 'react'
 import classes from './Aside.module.scss'
 import CatalogLinks from './CatalogLinks/CatalogLinks'
 import Filters from './Filters/Filters'
 
-const Aside: FC = ({}) => {
+const Aside = () => {
 
     return (
         <div className={classes.Wrap}>
             <div className={classes.Title}>Каталог</div>
-            <CatalogLinks/>
+            <CatalogLinks />
             <div className={classes.Title}>Фильтры</div>
-            <Filters/>
+            <Filters />
         </div>
     )
 }

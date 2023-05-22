@@ -1,0 +1,152 @@
+@import '../../../../css/common.scss';
+
+.Wrap {
+    padding-bottom: 80px;
+}
+
+.Container {
+    display: flex;
+}
+
+.Slider {
+    display: flex;
+}
+
+.Thumbs {
+    display: flex;
+    flex-direction: column;
+    width: 130px;
+    flex-shrink: 0;
+}
+
+.Thumb {
+    background-color: $grey-light;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 170px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    img {
+        object-fit: cover;
+    }
+}
+
+.Swiper {
+    margin-left: 20px;
+    width: 450px;
+}
+
+.Slide {
+    padding: 20px;
+    background-color: $grey-light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 530px;
+    overflow: hidden;
+    cursor: pointer;
+    img {
+        object-fit: cover;
+    }
+}
+
+.Info {
+    margin-left: 40px;
+}
+
+.Article {
+    @include text-16;
+    margin-bottom: 20px;
+}
+
+.Title {
+    @include h2;
+    margin-bottom: 60px;
+}
+
+.Row {
+    max-width: 380px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.Grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 40px;
+    margin-bottom: 40px;
+}
+
+.Price {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 52px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.Controls {
+    display: flex;
+}
+
+.Counter {
+    margin-left: 20px;
+    width: 156px;
+    height: 52px;
+    border-radius: 30px;
+    border: 1px solid $grey-light;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.CounterValue {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 110%;
+    color: $grey-light;
+}
+
+.CounterBtn {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+        path {
+            transition: $transition;
+        }
+    }
+    &:hover {
+        svg {
+            path {
+                fill: $yellow;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $desktopWide) {
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+}
+
+@media only screen and (max-width: $mobile) {
+}

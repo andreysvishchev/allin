@@ -1,56 +1,73 @@
-@import "../../../css/common.scss";
+@import '../../../css/common.scss';
 
 .Item {
-  width: 60px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 30px;
-  transition: $transition;
+    width: 60px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    transition: $transition;
 
-  &.Dark {
-    background-color: $navy-blue;
-    border: 1px solid $grey-light;
+    &.Dark {
+        background-color: $navy-blue;
+        border: 1px solid $grey-light;
 
-    svg {
-      path {
-        transition: $transition;
-        fill: $grey-light;
-      }
+        svg {
+            path {
+                transition: $transition;
+                fill: $grey-light;
+            }
+        }
     }
-  }
 
-  &.Light {
-    border: 1px solid $grey-light;
-    background-color: $grey-light;
-  }
+    &.Transparent {
+        background-color: transparent;
+        border: 1px solid $grey-light;
 
-  &:hover {
-    background-color: $yellow;
-    border: 1px solid $navy-blue;
-
-    svg {
-      path {
-        fill: $navy-blue;
-      }
+        svg {
+            path {
+                transition: $transition;
+                fill: $grey-light;
+            }
+        }
     }
-  }
+
+    &.Light {
+        border: 1px solid $navy-blue;
+        background-color: $grey-light;
+    }
+
+    &:hover {
+        background-color: $yellow;
+        border: 1px solid $navy-blue;
+
+        &.Light {
+            border-color: $yellow;
+        }
+        &.Dark {
+            border-color: $yellow;
+        }
+        &.Transparent {
+            border-color: $yellow;
+        }
+
+        svg {
+            path {
+                fill: $navy-blue;
+            }
+        }
+    }
 }
 
-
 @media only screen and (min-width: $desktopWide) {
-
 }
 
 @media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
-
 }
 
 @media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
-
 }
 
 @media only screen and (max-width: $mobile) {
-
 }

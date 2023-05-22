@@ -1,21 +1,19 @@
 import Container from '@/components/global/Container/Container'
-import {FC} from 'react'
+import { FC } from 'react'
 import Aside from './Aside/Aside'
 import Products from './Products/Products'
 import classes from './Section.module.scss'
-import Sorting from './Sorting/Sorting'
 
-const Section: FC = ({}) => {
+const Section: FC = ({ }) => {
 
     return (
         <div className={classes.Wrap}>
             <Container>
                 <h2 className={classes.Title}>Пищевая продукция</h2>
                 <div className={classes.Inner}>
-                    <Aside/>
+                    <Aside />
                     <div className={classes.Content}>
-                        <Sorting/>
-                        <Products/>
+                        <Products />
                     </div>
                 </div>
             </Container>

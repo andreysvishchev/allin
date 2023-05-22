@@ -1,13 +1,13 @@
 import Layout from '@/components/global/Layout/Layout'
 import Section from '@/components/pages/Section/Section'
-import {mockData} from '@/components/pages/Section/mockData'
-import {useSection} from "@/components/pages/Section/store";
-import {useEffect} from "react";
+import { mockData } from '@/components/pages/Section/mockData'
+import { useSection } from "@/components/pages/Section/store"
+import { useEffect } from "react"
 
 const paths = [
-    {title: 'Главная', href: '/'},
-    {title: 'Каталог', href: '/catalog'},
-    {title: 'Пищевая продукция', href: ''},
+    { title: 'Главная', href: '/' },
+    { title: 'Каталог', href: '/catalog' },
+    { title: 'Пищевая продукция', href: '' },
 ]
 
 export default function Page() {
@@ -19,10 +19,10 @@ export default function Page() {
 
     return (
         <Layout breadcrumbs={paths}
-                title={'Каталог'}
-                keywords={'Каталог'}
-                description={'Каталог'}>
-            <Section/>
+            title={'Секция'}
+            keywords={'Секция'}
+            description={'Секция'}>
+            <Section />
         </Layout>
     )
 }

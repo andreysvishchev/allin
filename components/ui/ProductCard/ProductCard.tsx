@@ -81,6 +81,7 @@ const ProductCard: FC<ProductCardType> = ({ data }) => {
             </div>
             <div className={classes.Bot}>
                 {data?.weight && <div className={classes.Weight}>{data.weight} мг</div>}
+                {data?.cvd && <div className={classes.CVD}>{data.cvd} CBD</div>}
                 {data?.price && <div className={classes.Price}>{data.price}₽</div>}
             </div>
         </div>
